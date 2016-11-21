@@ -1,0 +1,9 @@
+# Ignore node modules
+node_modules
+
+# Ignore bower components
+bower_components
+
+# Ignore Sublime Text project files
+*.sublime-project
+*.sublime-workspace

@@ -1,0 +1,33 @@
+{
+  "name": "tncpanel",
+  "description": "TNC-Panel is a free admin template / dashboard based on Bootstrap 3.",
+  "main": "",
+  "authors": [
+    "Tanju Yıldız <ben@tanjuyildiz.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "tncpanel",
+    "admin",
+    "dashboard",
+    "template",
+    "theme",
+    "bootstrap",
+    "gulp",
+    "bower",
+    "modern",
+    "flat"
+  ],
+  "homepage": "https://github.com/mavisland/tncpanel",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "modernizr": "^3.3.1",
+    "font-awesome": "^4.7.0"
+  }
+}

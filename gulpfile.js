@@ -22,89 +22,115 @@ var cleanCSS    = require('gulp-clean-css');
 var ejs         = require("gulp-ejs");
 var browserSync = require('browser-sync').create();
 
+// Error Handling
+var onError = function (err) {
+  gutil.log(gutil.colors.red(err));
+};
+
 // Set the banner content
 var banner = ['/*!\n',
-  ' * <%= pkg.title %> <%= pkg.version %>\n',
+  ' * TNC-Panel v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
   ' * <%= pkg.description %>\n',
   ' *\n',
-  ' * Copyright (c) ' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-  ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n',
+  ' * Copyright (c) ' + (new Date()).getFullYear(), ' <%= pkg.author.name %> <<%= pkg.author.email %>> \n',
+  ' * Licensed under the <%= pkg.license.type %> license (<%= pkg.license.url %>)\n' +
   ' */\n',
   ''
 ].join('');
 
-// Error Handling
-var onError = function (err) {
-  gutil.log(gutil.colors.red(err));
+// Path Variables
+var paths = {
+  assets           : 'src/assets/',
+  build            : 'dist/',
+  data             : 'src/data/',
+  scripts          : 'src/js/',
+  styles           : 'src/less/',
+  templates        : "src/templates/",
+  bower_components : 'bower_components/',
+  node_modules     : 'node_modules/'
+};
+
+// Input files variables
+var inputFiles = {
+  buildFiles         : paths.build + "**",
+  lessEntryPointFile : paths.styles + "style.less",
+  lessFiles          : paths.styles + "**/*.less",
+  htmlConfigJSON     : paths.data + "data.json",
+  htmlInputFiles     : [
+    paths.templates + '*.ejs',
+    '!' + paths.templates + '_*.ejs'
+  ],
+  jsInputFiles       : [
+    paths.scripts + 'bootstrap/transition.js',
+    paths.scripts + 'bootstrap/alert.js',
+    paths.scripts + 'bootstrap/button.js',
+    paths.scripts + 'bootstrap/carousel.js',
+    paths.scripts + 'bootstrap/collapse.js',
+    paths.scripts + 'bootstrap/dropdown.js',
+    paths.scripts + 'bootstrap/modal.js',
+    paths.scripts + 'bootstrap/tooltip.js',
+    paths.scripts + 'bootstrap/popover.js',
+    paths.scripts + 'bootstrap/scrollspy.js',
+    paths.scripts + 'bootstrap/tab.js',
+    paths.scripts + 'bootstrap/affix.js',
+    paths.scripts + 'scripts.js'
+  ],
+  jsOutputFileName : pkg.name + ".js"
 };
 
 // Clean build directory
 gulp.task("clean", function () {
   gutil.log(gutil.colors.yellow('Cleaning generated files.'));
 
-  return gulp.src('dist/', {read: false})
+  return gulp.src(paths.build, {read: false})
     .pipe(clean());
 });
 
 // Compile LESS files from /less into /css
 gulp.task('less', function() {
-  return gulp.src('less/style.less')
+  gutil.log(gutil.colors.yellow('Compiling LESS files to CSS files.'));
+
+  return gulp.src(inputFiles.lessEntryPointFile)
     .pipe(less({
       paths: ["."] // Specify search paths for @import directives
     }))
     .pipe(header(banner, { pkg: pkg }))
-    .pipe(gulp.dest('dist/css'))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
-});
-
-// Minify compiled CSS
-gulp.task('minify-css', ['less'], function() {
-  return gulp.src('dist/css/style.css')
+    .pipe(gulp.dest(paths.build + 'css/'))
+    // Minify compiled CSS
     .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest(paths.build + 'css/'))
     .pipe(browserSync.reload({
       stream: true
     }));
 });
 
-// Copy JS to dist
+// Concatenates JS files and minified
 gulp.task('js', function() {
-  return gulp.src(['js/tncpanel.js'])
-    .pipe(header(banner, { pkg: pkg }))
-    .pipe(gulp.dest('dist/js'))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
-});
+  gutil.log(gutil.colors.yellow('Minifying JS files.'));
 
-// Minify JS
-gulp.task('minify-js', ['js'], function() {
-  return gulp.src('dist/js/tncpanel.js')
+  return gulp.src(inputFiles.jsInputFiles)
+    .pipe(header(banner, { pkg: pkg }))
+    .pipe(concat(inputFiles.jsOutputFileName))
+    .pipe(gulp.dest(paths.build + 'js/'))
+    // Minify JS
     .pipe(uglify())
     .pipe(header(banner, { pkg: pkg }))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest(paths.build + 'js/'))
     .pipe(browserSync.reload({
       stream: true
     }));
 });
 
 // Compile all EJS templates to HTML
-var json = JSON.parse(filesys.readFileSync("tncpanel.json")); // parse json
+var json = JSON.parse(filesys.readFileSync(inputFiles.htmlConfigJSON)); // parse json
 gulp.task("templates", function() {
-  var source = [
-    'templates/*.ejs',
-    '!' + 'templates/_*.ejs' // Don't build html which starts from underline
-  ];
-
   gutil.log(gutil.colors.yellow('Compiling EJS templates to HTML files.'));
 
-  return gulp.src(source)
+  return gulp.src(inputFiles.htmlInputFiles)
     .pipe(ejs(json, {ext:'.html'}).on('error', gutil.log))
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest(paths.build))
     .pipe(browserSync.reload({
       stream: true
     }));
@@ -113,44 +139,53 @@ gulp.task("templates", function() {
 // Copy vendor libraries from /bower_components into /vendor
 gulp.task('copy', function() {
   gulp.src([
-    'bower_components/bootstrap/dist/css/bootstrap.min.css',
-    'bower_components/font-awesome/css/font-awesome.min.css'
+    paths.bower_components + 'font-awesome/css/font-awesome.min.css'
   ])
     .pipe(gulp.dest('dist/css'));
 
   gulp.src([
-    'bower_components/jquery/dist/jquery.min.js',
-    'bower_components/bootstrap/dist/js/bootstrap.min.js'
+    paths.node_modules + 'jquery/dist/jquery.min.js'
   ])
     .pipe(gulp.dest('dist/js'));
 
   gulp.src([
-    'bower_components/bootstrap/fonts/*.{eot,svg,ttf,woff,woff2}',
-    'bower_components/font-awesome/fonts/*.{eot,svg,ttf,woff,woff2}'
+    paths.assets + 'fonts/glyphicons/*.{eot,svg,ttf,woff,woff2}',
+    paths.bower_components + 'font-awesome/fonts/*.{eot,svg,ttf,woff,woff2}'
   ])
     .pipe(gulp.dest('dist/fonts'));
 });
 
-// Run everything
-gulp.task('default', ['templates',]);
-
 // Configure the browserSync task
 gulp.task('browserSync', function() {
   browserSync.init({
-    server: {
-      baseDir: 'dist/'
+    ui: {
+      port: 3944
     },
+    server: {
+      baseDir: paths.build,
+      index: "index.html"
+    },
+    port: 7947
   });
 });
 
+// Reload Browser
+gulp.task('bsReload', function() {
+  return browserSync.reload();
+});
+
+// Run everything
+gulp.task('default', ['clean', 'browserSync'], function() {
+  gulp.start('dev');
+});
+
 // Dev task with browserSync
-gulp.task('dev', ['clean', 'browserSync', 'copy', 'templates', 'less', 'minify-css', 'js', 'minify-js'], function() {
-  gulp.watch('less/**/*.less', ['less']);
-  gulp.watch('dist/css/style.css', ['minify-css']);
-  gulp.watch('js/*.js', ['minify-js']);
-  gulp.watch(['tncpanel.json', 'templates/*.ejs'], ['templates']);
-  // Reloads the browser whenever HTML or JS files change
-  gulp.watch('dist/*.html', browserSync.reload);
-  gulp.watch('dist/css/*.css', browserSync.reload);
-  gulp.watch('dist/js/*.js', browserSync.reload);
+gulp.task('dev', ['copy', 'templates', 'less', 'js'], function() {
+  gulp.watch(inputFiles.lessFiles, ['less']);
+  gulp.watch(inputFiles.jsInputFiles, ['js']);
+  gulp.watch([inputFiles.htmlConfigJSON, paths.templates + '*.ejs'], ['templates', 'bsReload']);
+  // Reloads the browser whenever HTML, CSS or JS files change
+  gulp.watch(paths.build + '*.html', ['bsReload']);
+  gulp.watch([paths.build + 'css/*.css', '!' + paths.build + 'css/*.min.css'], ['bsReload']);
+  gulp.watch([paths.build + 'js/*.js', '!' + paths.build + 'js/*.min.js'], ['bsReload']);
 });

@@ -1,0 +1,44 @@
+//
+// Content
+// --------------------------------------------------
+
+.wrapper {
+    padding: 20px;
+    .clearfix();
+}
+
+.app-content {
+    height: 100%;
+
+    &,
+    .content-wrapper {
+        .clearfix();
+    }
+
+    @media (min-width: @screen-sm-min) {
+        margin-left: @sidebar-width;
+    }
+}
+
+.content-header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    float: left;
+    width: 100%;
+
+    .page-title {
+        font-size: @font-size-h3;
+        line-height: unit(32px / @font-size-h3);
+        margin: 0;
+    }
+
+    .page-desc {}
+}
+
+.content-wrapper {
+    float: left;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: @app-header-height;
+}

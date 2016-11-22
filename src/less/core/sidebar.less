@@ -1,0 +1,130 @@
+//
+// Sidebar
+// --------------------------------------------------
+
+.app-aside {
+    float: left;
+    color: @sidebar-text-color;
+    background-color: @sidebar-bg-color;
+    width: @sidebar-width;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        width: inherit;
+        background-color: inherit;
+        border: inherit;
+    }
+}
+
+.sidebar {
+    .nav {
+        // Header
+        > .header {
+            background-color: @sidenav-header-bg-color;
+            color: @sidenav-header-text-color;
+            font-size: 12px;
+            .text-uppercase();
+            margin-top: 10px;
+            padding: 8px 25px 8px 15px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        // Item
+        > li {
+            position: relative;
+            display: block;
+
+            > a {
+                background-color: @sidenav-link-bg-color;
+                color: @sidenav-link-color;
+
+                * {
+                    position: relative;
+                }
+
+                .nav-caret {
+                    float: right;
+                    margin-left: 1rem;
+                    opacity: .45;
+
+                     i {
+                        .transition(transform .2s ease-in-out);
+                     }
+                }
+
+                .nav-icon {
+                    float: left;
+                    width: 20px;
+                    margin-right: 5px;
+                    overflow: hidden;
+                    .text-center();
+                }
+
+                .nav-text {
+                    font-weight: 300;
+                }
+
+                &:hover,
+                &:focus {
+                    background-color: @sidenav-link-hover-bg-color;
+                    color: @sidenav-link-hover-color;
+                }
+
+                &,
+                &:hover,
+                &:focus {
+                    .nav-caret {
+                        color: @sidenav-link-color;
+                    }
+                }
+            }
+        }
+
+        // Active state
+        > .active > a {
+            &,
+            &:hover,
+            &:focus {
+                background-color: @sidenav-link-active-bg-color;
+                color: @sidenav-link-active-color;
+            }
+
+            .nav-caret i {
+                .rotate(180deg);
+            }
+        }
+
+        // Divider
+        > .divider {
+            background-color: @navbar-collapse-bg-color;
+            width: 100%;
+            height: 2px;
+            margin: 10px 0;
+            overflow: hidden;
+            font-size: 0;
+        }
+    }
+
+    // Sub-menu
+    .nav-sub {
+        background-color: @navbar-collapse-bg-color;
+        display: none;
+
+        > li {
+            font-size: @font-size-small;
+
+            > a {
+                .pad-tb(6px);
+            }
+        }
+
+        .nav-sub {
+            padding-left: 10px;
+        }
+    }
+}

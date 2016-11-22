@@ -1,0 +1,121 @@
+//
+// Header
+// --------------------------------------------------
+
+.app-header {
+    position: fixed;
+    top: 0;
+    z-index: 1025;
+    width: 100%;
+    border-radius: 0;
+
+    &.navbar {
+        margin: 0;
+        border-width: 0;
+        border-radius: 0;
+    }
+
+    .navbar-header {
+        background-color: @navbar-header-bg-color;
+        width: @app-header-width;
+    }
+
+    // Brand
+    .navbar-brand {
+        color: @navbar-brand-color;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: unit(@app-header-height / 20px);
+        padding: 0 20px;
+        .text-uppercase();
+
+        &:hover,
+        &:focus {
+            color: @navbar-brand-hover-color;
+        }
+    }
+
+    .navbar-collapse {
+        position: relative;
+        background-color: @navbar-collapse-bg-color;
+    }
+
+    // Menu
+    .navbar-nav {
+        > li {
+            border-right: 1px solid @navbar-nav-border-color;
+
+            > a {
+                background-color: @navbar-nav-link-bg;
+                color: @navbar-nav-link-color;
+
+                &:hover,
+                &:focus {
+                    background-color: @navbar-nav-hover-bg;
+                    color: @navbar-nav-hover-color;
+                }
+            }
+        }
+
+        > .active > a {
+            background-color: @navbar-nav-active-bg;
+            color: @navbar-nav-active-color;
+        }
+
+        &.navbar-right {
+            > li {
+                border-right: 0;
+                border-left: 1px solid @navbar-nav-border-color;
+            }
+        }
+    }
+
+    // Profile
+    .profile {
+        > a {
+            .avatar {
+                .mar-tb(-5px);
+                margin-right: 6px;
+                height: 30px;
+                width: 30px;
+            }
+        }
+    }
+
+    // Search Form
+    .search {
+        .form-control,
+        .btn {
+            background-color: #333;
+            border: 1px solid #444;
+            border-radius: 0;
+            color: #ccc;
+        }
+
+
+        .form-control {
+            color: #999;
+
+            &:focus {
+                border-color: #444;
+                .box-shadow(none);
+            }
+        }
+
+        .btn {
+            color: #ccc;
+
+            &:hover,
+            &:focus {
+                background-color: @navbar-collapse-bg-color;
+                color: #fff;
+            }
+        }
+    }
+
+    @media (min-width: @screen-sm-min) {
+        .navbar-collapse {
+            margin-left: @app-header-width;
+        }
+    }
+}

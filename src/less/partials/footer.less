@@ -1,0 +1,23 @@
+//
+// Footer
+// --------------------------------------------------
+
+.app-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1005;
+}
+
+.footer-wrapper {
+    background-color: @app-footer-bg-color;
+    border-top: 1px solid @app-footer-border-color;
+    color: @app-footer-text-color;
+    font-size: @font-size-small;
+    padding: 10px 15px;
+
+    @media (min-width: @screen-sm-min) {
+        margin-left: @app-header-width;
+    }
+}

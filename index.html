@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>TNCPanel</title>
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="dashboard" class="dashboard">
+    <div class="app">
+        <header id="header" class="app-header navbar" role="menu">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><strong>TNC</strong>Panel</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fa fa-bar-chart"></i> Reports</a></li>
+                    <li><a href="#"><i class="fa fa-cogs"></i> Components</a></li>
+                    <li><a href="faq.html"><i class="fa fa-book"></i> FAQ</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i> Settings <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="sign-up.html">Sign-up</a></li>
+                            <li><a href="reset-password.html">Forgot Password?</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown profile">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <img class="avatar" alt="Administrator" src="https://avatars0.githubusercontent.com/u/119868"/>
+                            Administrator <i class="fa fa-fw fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="user-profile.html"><i class="fa fa-user fa-fw"></i> Profile</a></li>
+                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a></li>
+                            <li><a href="#"><i class="fa fa-question-circle fa-fw"></i> Help</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form search navbar-right" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn" type="submit"><i class="fa fa-search fa-fw"></i></button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </header> <!-- #header -->
+       <aside id="aside" class="app-aside">
+            <div class="aside-wrapper">
+                <div class="sidebar">
+                    <ul class="nav">
+
+                        <li class="header">Navigation</li>
+
+                        <li class="link dashboard">
+                            <a href="index.html">
+                                
+                                <span class="nav-icon"><i class="fa fa-fw fa-dashboard"></i></span>
+                                <span class="nav-text">Dashboard</span>
+                            </a>
+
+                        </li>
+
+                        <li class="link has-child">
+                            <a href="#">
+                                <span class="nav-caret"><i class="fa fa-caret-down"></i></span>
+                                <span class="nav-icon"><i class="fa fa-fw fa-paint-brush"></i></span>
+                                <span class="nav-text">UI Elements</span>
+                            </a>
+
+                            <ul class="nav nav-sub">
+
+                                <li class="sub-link">
+                                    <a href="buttons.html">
+                                        
+                                        <span class="nav-text">Buttons</span>
+                                    </a>
+
+                                </li>
+
+                                <li class="sub-link">
+                                    <a href="grid.html">
+                                        
+                                        <span class="nav-text">Grid System</span>
+                                    </a>
+
+                                </li>
+
+                                <li class="sub-link">
+                                    <a href="panels.html">
+                                        
+                                        <span class="nav-text">Panels</span>
+                                    </a>
+
+                                </li>
+
+                                <li class="sub-link">
+                                    <a href="typography.html">
+                                        
+                                        <span class="nav-text">Typography</span>
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="link has-child">
+                            <a href="icons.html">
+                                <span class="nav-caret"><i class="fa fa-caret-down"></i></span>
+                                <span class="nav-icon"><i class="fa fa-fw fa-diamond"></i></span>
+                                <span class="nav-text">Icons</span>
+                            </a>
+
+                            <ul class="nav nav-sub">
+
+                                <li class="sub-link">
+                                    <a href="icons-fa.html">
+                                        
+                                        <span class="nav-text">Font Awesome</span>
+                                    </a>
+
+                                </li>
+
+                                <li class="sub-link">
+                                    <a href="icons-glyphicons.html">
+                                        
+                                        <span class="nav-text">Glyphicons</span>
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="link">
+                            <a href="forms.html">
+                                
+                                <span class="nav-icon"><i class="fa fa-fw fa-edit"></i></span>
+                                <span class="nav-text">Forms</span>
+                            </a>
+
+                        </li>
+
+                        <li class="link">
+                            <a href="tables.html">
+                                
+                                <span class="nav-icon"><i class="fa fa-fw fa-list-alt"></i></span>
+                                <span class="nav-text">Tables</span>
+                            </a>
+
+                        </li>
+
+                        <li class="divider"></li>
+
+                        <li class="header">More</li>
+
+                        <li class="link has-child">
+                            <a href="#">
+                                <span class="nav-caret"><i class="fa fa-caret-down"></i></span>
+                                <span class="nav-icon"><i class="fa fa-fw fa-file-o"></i></span>
+                                <span class="nav-text">Pages</span>
+                            </a>
+
+                            <ul class="nav nav-sub">
+
+                                <li class="sub-link">
+                                    <a href="#">
+                                        
+                                        <span class="nav-text">Login</span>
+                                    </a>
+
+                                </li>
+
+                                <li class="sub-link">
+                                    <a href="#">
+                                        
+                                        <span class="nav-text">Signup</span>
+                                    </a>
+
+                                </li>
+
+                                <li class="sub-link">
+                                    <a href="blank.html">
+                                        
+                                        <span class="nav-text">Blank Page</span>
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="link has-child">
+                            <a href="#">
+                                <span class="nav-caret"><i class="fa fa-caret-down"></i></span>
+                                <span class="nav-icon"><i class="fa fa-fw fa-sitemap"></i></span>
+                                <span class="nav-text">Multi-level Dropdown</span>
+                            </a>
+
+                            <ul class="nav nav-sub">
+
+                                <li class="sub-link">
+                                    <a href="#">
+                                        
+                                        <span class="nav-text">Second Level Item</span>
+                                    </a>
+
+                                </li>
+
+                                <li class="sub-link">
+                                    <a href="#">
+                                        
+                                        <span class="nav-text">Second Level Item</span>
+                                    </a>
+
+                                </li>
+
+                                <li class="sub-link has-child">
+                                    <a href="#">
+                                        <span class="nav-caret"><i class="fa fa-caret-down"></i></span>
+                                        <span class="nav-text">Third Level</span>
+                                    </a>
+
+                                    <ul class="nav nav-sub">
+
+                                        <li class="sub-link">
+                                            <a href="#">
+                                                <span class="nav-text">Third Level Item</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="sub-link">
+                                            <a href="#">
+                                                <span class="nav-text">Third Level Item</span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </aside> <!-- #aside -->
+
+        <div id="content" class="app-content" role="main">
+            <div class="content-header">
+                <h1 class="page-title">Dashboard</h1>
+                <span class="page-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+            </div>
+            <div class="content-wrapper">
+                <div class="container-fluid plr-0">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert alert-info" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <strong>Just a quick note:</strong> Hope you like the theme!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Latest Stats</h3>
+                                </div>
+                                <div class="panel-body">
+                                    Panel content
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum necessitatibus ab id tenetur molestias voluptatum cumque consequatur aliquid repellendus pariatur. Vel suscipit veritatis architecto sed odit esse ab quo deleniti.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolorem, esse hic, ex tenetur accusantium iure illo, minus nam cupiditate molestiae dolorum eveniet! Cupiditate aperiam illum reprehenderit neque vitae debitis.</p>
+            </div>
+        </div> <!-- #content -->
+        <footer id="footer" class="app-footer" role="footer">
+            <div class="footer-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">2016 &copy; <a href="https://github.com/mavisland/tncpanel">TNCPanel</a> by <a href="https://github.com/mavisland" target="_blank">@mavisland</a></div>
+                    </div>
+                </div>
+            </div>
+        </footer> <!-- #footer -->
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tncpanel.min.js"></script>
+</body>
+</html>

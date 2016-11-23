@@ -21,15 +21,23 @@
     <div class="app">
         <header id="header" class="app-header navbar" role="menu">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <button class="aside-toggle" aria-expanded="true" type="button" title="Collapse sidenav ( [ )">
+                    <span class="sr-only">Toggle sidebar</span>
+                    <i class="fa fa-fw fa-dedent text"></i>
+                    <i class="fa fa-fw fa-indent text-active"></i>
+                </button>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <i class="fa fa-fw fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="index.html"><strong>TNC</strong>Panel</a>
             </div>
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <div class="navbar-collapse collapse">
+                <button class="aside-toggle" aria-expanded="true" type="button" title="Collapse sidenav ( [ )">
+                    <span class="sr-only">Toggle sidebar</span>
+                    <i class="fa fa-fw fa-dedent text"></i>
+                    <i class="fa fa-fw fa-indent text-active"></i>
+                </button>
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
                     <li><a href="#"><i class="fa fa-bar-chart"></i> Reports</a></li>
@@ -76,7 +84,7 @@
 
                         <li class="header">Navigation</li>
 
-                        <li class="link dashboard">
+                        <li class="dashboard">
                             <a href="index.html">
                                 
                                 <span class="nav-icon"><i class="fa fa-fw fa-dashboard"></i></span>
@@ -85,7 +93,7 @@
 
                         </li>
 
-                        <li class="link has-child">
+                        <li>
                             <a href="#">
                                 <span class="nav-caret"><i class="fa fa-caret-down"></i></span>
                                 <span class="nav-icon"><i class="fa fa-fw fa-paint-brush"></i></span>
@@ -94,7 +102,7 @@
 
                             <ul class="nav nav-sub">
 
-                                <li class="sub-link">
+                                <li>
                                     <a href="buttons.html">
                                         
                                         <span class="nav-text">Buttons</span>
@@ -102,7 +110,7 @@
 
                                 </li>
 
-                                <li class="sub-link">
+                                <li>
                                     <a href="grid.html">
                                         
                                         <span class="nav-text">Grid System</span>
@@ -110,7 +118,7 @@
 
                                 </li>
 
-                                <li class="sub-link">
+                                <li>
                                     <a href="panels.html">
                                         
                                         <span class="nav-text">Panels</span>
@@ -118,7 +126,7 @@
 
                                 </li>
 
-                                <li class="sub-link">
+                                <li>
                                     <a href="typography.html">
                                         
                                         <span class="nav-text">Typography</span>
@@ -130,7 +138,7 @@
 
                         </li>
 
-                        <li class="link has-child">
+                        <li>
                             <a href="icons.html">
                                 <span class="nav-caret"><i class="fa fa-caret-down"></i></span>
                                 <span class="nav-icon"><i class="fa fa-fw fa-diamond"></i></span>
@@ -139,7 +147,7 @@
 
                             <ul class="nav nav-sub">
 
-                                <li class="sub-link">
+                                <li>
                                     <a href="icons-fa.html">
                                         
                                         <span class="nav-text">Font Awesome</span>
@@ -147,7 +155,7 @@
 
                                 </li>
 
-                                <li class="sub-link">
+                                <li>
                                     <a href="icons-glyphicons.html">
                                         
                                         <span class="nav-text">Glyphicons</span>
@@ -159,7 +167,7 @@
 
                         </li>
 
-                        <li class="link">
+                        <li>
                             <a href="forms.html">
                                 
                                 <span class="nav-icon"><i class="fa fa-fw fa-edit"></i></span>
@@ -168,7 +176,7 @@
 
                         </li>
 
-                        <li class="link">
+                        <li>
                             <a href="tables.html">
                                 
                                 <span class="nav-icon"><i class="fa fa-fw fa-list-alt"></i></span>
@@ -181,7 +189,7 @@
 
                         <li class="header">More</li>
 
-                        <li class="link has-child">
+                        <li>
                             <a href="#">
                                 <span class="nav-caret"><i class="fa fa-caret-down"></i></span>
                                 <span class="nav-icon"><i class="fa fa-fw fa-file-o"></i></span>
@@ -190,7 +198,7 @@
 
                             <ul class="nav nav-sub">
 
-                                <li class="sub-link">
+                                <li>
                                     <a href="#">
                                         
                                         <span class="nav-text">Login</span>
@@ -198,7 +206,7 @@
 
                                 </li>
 
-                                <li class="sub-link">
+                                <li>
                                     <a href="#">
                                         
                                         <span class="nav-text">Signup</span>
@@ -206,7 +214,7 @@
 
                                 </li>
 
-                                <li class="sub-link">
+                                <li>
                                     <a href="blank.html">
                                         
                                         <span class="nav-text">Blank Page</span>
@@ -218,7 +226,7 @@
 
                         </li>
 
-                        <li class="link has-child">
+                        <li>
                             <a href="#">
                                 <span class="nav-caret"><i class="fa fa-caret-down"></i></span>
                                 <span class="nav-icon"><i class="fa fa-fw fa-sitemap"></i></span>
@@ -227,39 +235,63 @@
 
                             <ul class="nav nav-sub">
 
-                                <li class="sub-link">
+                                <li>
                                     <a href="#">
                                         
-                                        <span class="nav-text">Second Level Item</span>
+                                        <span class="nav-text">Second Level Item #1</span>
                                     </a>
 
                                 </li>
 
-                                <li class="sub-link">
+                                <li>
                                     <a href="#">
                                         
-                                        <span class="nav-text">Second Level Item</span>
+                                        <span class="nav-text">Second Level Item #2</span>
                                     </a>
 
                                 </li>
 
-                                <li class="sub-link has-child">
+                                <li>
                                     <a href="#">
                                         <span class="nav-caret"><i class="fa fa-caret-down"></i></span>
-                                        <span class="nav-text">Third Level</span>
+                                        <span class="nav-text">Third Level #1</span>
                                     </a>
 
                                     <ul class="nav nav-sub">
 
-                                        <li class="sub-link">
+                                        <li>
                                             <a href="#">
-                                                <span class="nav-text">Third Level Item</span>
+                                                <span class="nav-text">Third Level Item #1</span>
                                             </a>
                                         </li>
 
-                                        <li class="sub-link">
+                                        <li>
                                             <a href="#">
-                                                <span class="nav-text">Third Level Item</span>
+                                                <span class="nav-text">Third Level Item #2</span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <span class="nav-caret"><i class="fa fa-caret-down"></i></span>
+                                        <span class="nav-text">Third Level #2</span>
+                                    </a>
+
+                                    <ul class="nav nav-sub">
+
+                                        <li>
+                                            <a href="#">
+                                                <span class="nav-text">Third Level Item #1</span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <span class="nav-text">Third Level Item #2</span>
                                             </a>
                                         </li>
 
@@ -284,33 +316,15 @@
             <div class="content-wrapper">
                 <div class="container-fluid plr-0">
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="alert alert-info" role="alert">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <strong>Just a quick note:</strong> Hope you like the theme!
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="panel">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Latest Stats</h3>
-                                </div>
-                                <div class="panel-body">
-                                    Panel content
-                                </div>
-                            </div>
-                        </div>
+                        <div class="col-md-8"></div>
+                        <div class="col-md-4"></div>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum necessitatibus ab id tenetur molestias voluptatum cumque consequatur aliquid repellendus pariatur. Vel suscipit veritatis architecto sed odit esse ab quo deleniti.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolorem, esse hic, ex tenetur accusantium iure illo, minus nam cupiditate molestiae dolorum eveniet! Cupiditate aperiam illum reprehenderit neque vitae debitis.</p>
             </div>
         </div> <!-- #content -->
         <footer id="footer" class="app-footer" role="footer">
             <div class="footer-wrapper">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">2016 &copy; <a href="https://github.com/mavisland/tncpanel">TNCPanel</a> by <a href="https://github.com/mavisland" target="_blank">@mavisland</a></div>
                     </div>

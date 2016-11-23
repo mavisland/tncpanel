@@ -16,8 +16,15 @@
     color: @app-footer-text-color;
     font-size: @font-size-small;
     padding: 10px 15px;
+}
 
-    @media (min-width: @screen-sm-min) {
-        margin-left: @app-header-width;
+@media (min-width: @grid-float-breakpoint) {
+    .app-footer {
+        .transition(left .3s);
+        left: @app-header-width;
+
+        .aside-collapse & {
+            left: 50px;
+        }
     }
 }

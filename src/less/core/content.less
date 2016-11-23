@@ -14,10 +14,6 @@
     .content-wrapper {
         .clearfix();
     }
-
-    @media (min-width: @screen-sm-min) {
-        margin-left: @sidebar-width;
-    }
 }
 
 .content-header {
@@ -41,4 +37,15 @@
     width: 100%;
     padding: 20px;
     padding-bottom: @app-header-height;
+}
+
+@media (min-width: @grid-float-breakpoint) {
+    .app-content {
+        margin-left: @sidebar-width;
+        .transition(margin-left .3s);
+
+        .aside-collapse & {
+             margin-left: 50px;
+        }
+    }
 }

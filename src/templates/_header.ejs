@@ -20,15 +20,23 @@
     <div class="app">
         <header id="header" class="app-header navbar" role="menu">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <button class="aside-toggle" aria-expanded="true" type="button" title="Collapse sidenav ( [ )">
+                    <span class="sr-only">Toggle sidebar</span>
+                    <i class="fa fa-fw fa-dedent text"></i>
+                    <i class="fa fa-fw fa-indent text-active"></i>
+                </button>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <i class="fa fa-fw fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="index.html"><strong>TNC</strong>Panel</a>
             </div>
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <div class="navbar-collapse collapse">
+                <button class="aside-toggle" aria-expanded="true" type="button" title="Collapse sidenav ( [ )">
+                    <span class="sr-only">Toggle sidebar</span>
+                    <i class="fa fa-fw fa-dedent text"></i>
+                    <i class="fa fa-fw fa-indent text-active"></i>
+                </button>
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
                     <li><a href="#"><i class="fa fa-bar-chart"></i> Reports</a></li>

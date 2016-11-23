@@ -1,6 +1,6 @@
 {
   "name": "tncpanel",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "description": "A free admin template / dashboard based on Bootstrap 3",
   "keywords": [
     "tncpanel",
@@ -46,5 +46,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7"
+  },
+  "scripts": {
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   }
 }

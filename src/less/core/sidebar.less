@@ -7,6 +7,7 @@
     color: @sidebar-text-color;
     background-color: @sidebar-bg-color;
     width: @sidebar-width;
+    .transition(width .3s);
 
     &:before {
         content: "";
@@ -17,6 +18,39 @@
         width: inherit;
         background-color: inherit;
         border: inherit;
+    }
+}
+
+.aside-toggle {
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    color: @navbar-nav-link-color;
+    display: block;
+    float: left;
+    line-height: 50px;
+    margin-left: -15px;
+    outline: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    .transition(background-color 1s);
+    .square(@navbar-height);
+
+    .text-active {
+        display: none;
+    }
+
+    &.active {
+        color: @navbar-nav-active-color;
+
+        .text {
+            display: none;
+        }
+
+        .text-active {
+            display: inline-block;
+        }
     }
 }
 
@@ -42,6 +76,7 @@
             > a {
                 background-color: @sidenav-link-bg-color;
                 color: @sidenav-link-color;
+                overflow: hidden;
 
                 * {
                     position: relative;
@@ -65,9 +100,7 @@
                     .text-center();
                 }
 
-                .nav-text {
-                    font-weight: 300;
-                }
+                .nav-text {}
 
                 &:hover,
                 &:focus {
@@ -125,6 +158,29 @@
 
         .nav-sub {
             padding-left: 10px;
+        }
+    }
+}
+
+.aside-collapse {
+    .app-aside {
+        width: 50px;
+    }
+
+    .sidebar {
+        .nav {
+            > .header {
+                display: none;
+            }
+
+            > li {
+                > a {
+                    .nav-text,
+                    .nav-caret {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 }

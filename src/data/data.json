@@ -73,19 +73,29 @@
     "link": "#",
     "icon": "fa-sitemap",
     "child": [{
-      "title": "Second Level Item",
+      "title": "Second Level Item #1",
       "link": "#"
     }, {
-      "title": "Second Level Item",
+      "title": "Second Level Item #2",
       "link": "#"
     }, {
-      "title": "Third Level",
+      "title": "Third Level #1",
       "link": "#",
       "child": [{
-        "title": "Third Level Item",
+        "title": "Third Level Item #1",
         "link": "#"
       }, {
-        "title": "Third Level Item",
+        "title": "Third Level Item #2",
+        "link": "#"
+      }]
+    }, {
+      "title": "Third Level #2",
+      "link": "#",
+      "child": [{
+        "title": "Third Level Item #1",
+        "link": "#"
+      }, {
+        "title": "Third Level Item #2",
         "link": "#"
       }]
     }]

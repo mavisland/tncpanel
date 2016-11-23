@@ -8,7 +8,7 @@
 <% } else if (navigation[i].type == "divider") { -%>
                         <li class="divider"></li>
 <% } else { -%>
-                        <li class="link<% if (typeof navigation[i].child != 'undefined') { %> has-child<% } %><% if (typeof navigation[i].class != 'undefined') { %> <%= navigation[i].class %><% } %>">
+                        <li<% if (typeof navigation[i].class != 'undefined') { %> class="<%= navigation[i].class %>"<% } %>>
                             <a href="<%= navigation[i].link %>">
                                 <% if (typeof navigation[i].child != 'undefined') { %><span class="nav-caret"><i class="fa fa-caret-down"></i></span><% } %>
                                 <span class="nav-icon"><i class="fa fa-fw <% if (typeof navigation[i].icon != 'undefined') { %><%= navigation[i].icon %><% } else { %>fa-file<% } %>"></i></span>
@@ -17,7 +17,7 @@
 <% if (typeof navigation[i].child != 'undefined') { var children = navigation[i].child; %>
                             <ul class="nav nav-sub">
 <% for(var c=0; c < children.length; c++) { %>
-                                <li class="sub-link<% if (typeof children[c].child != 'undefined') { %> has-child<% } %>">
+                                <li>
                                     <a href="<%= children[c].link %>">
                                         <% if (typeof children[c].child != 'undefined') { %><span class="nav-caret"><i class="fa fa-caret-down"></i></span><% } %>
                                         <span class="nav-text"><%= children[c].title %></span>
@@ -25,7 +25,7 @@
 <% if (typeof children[c].child != 'undefined') { var grchildren = children[c].child; %>
                                     <ul class="nav nav-sub">
 <% for(var g=0; g < grchildren.length; g++) { %>
-                                        <li class="sub-link">
+                                        <li>
                                             <a href="<%= grchildren[g].link %>">
                                                 <span class="nav-text"><%= grchildren[g].title %></span>
                                             </a>

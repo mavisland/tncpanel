@@ -1,0 +1,495 @@
+<%
+var pageTitle = "Buttons";
+var pageID    = "buttons";
+%>
+<% include _header %>
+<% include _sidebar %>
+        <div id="content" class="app-content" role="main">
+            <div class="content-header">
+                <h2 class="page-title"><%= pageTitle %></h2>
+                <p>Discover the Buttons features below</p>
+            </div>
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="title-hero">Basic</h3>
+                        <p class="title-lead">To create this element, with default color styling, you need to add the <code>.btn</code> and <code>.btn-default</code>CSS class to any <code>&lt;a&gt;</code>, <code>&lt;input&gt;</code> or <code>&lt;button&gt;</code> element.</p>
+                        <div class="doc-example">
+                            <a class="btn btn-default" href="#" role="button">Link</a>
+                            <button class="btn btn-default" type="submit">Button</button>
+                            <input class="btn btn-default" type="button" value="Input">
+                            <input class="btn btn-default" type="submit" value="Submit">
+                        </div>
+
+                        <h3 class="title-hero">Disabled States</h3>
+                        <p class="title-lead">You can disable a button element by adding either the <code>.disabled</code> CSS helper class or the <code>disabled</code> parameter.</p>
+                        <div class="doc-example">
+                            <a class="btn btn-default disabled" href="#" role="button">Link</a>
+                            <button class="btn btn-default disabled" type="submit">Button</button>
+                            <input class="btn btn-default disabled" type="button" value="Input">
+                            <input class="btn btn-default disabled" type="submit" value="Submit">
+                            <a class="btn btn-primary" disabled="disabled" href="#" role="button">Link</a>
+                            <button class="btn btn-primary" disabled="disabled" type="submit">Button</button>
+                            <input class="btn btn-primary" disabled="disabled" type="button" value="Input">
+                            <input class="btn btn-primary" disabled="disabled" type="submit" value="Submit">
+                        </div>
+
+                        <h3 class="title-hero">Active States</h3>
+                        <p class="title-lead">To make a button element active you need to add the <code>.active</code> CSS helper class.</p>
+                        <div class="doc-example">
+                            <a class="btn btn-default active" href="#" role="button">Link</a>
+                            <button class="btn btn-primary active" type="submit">Button</button>
+                            <input class="btn btn-info active" type="button" value="Input">
+                            <input class="btn btn-warning active" type="submit" value="Submit">
+                        </div>
+
+                        <h3 class="title-hero">Sizes</h3>
+                        <p class="title-lead">To change the button elements sizes you need to add one of the following CSS helper classes <code>.btn-xs</code>, <code>.btn-sm</code>, <code>.btn-lg</code>.</p>
+                        <div class="doc-example">
+                            <div class="m-b-10">
+                                <a href="#" class="btn btn-default btn-xs">Extra small button</a>
+                                <a href="#" class="btn btn-default btn-sm">Small button</a>
+                                <a href="#" class="btn btn-default">Default button</a>
+                                <a href="#" class="btn btn-default btn-lg">Large button</a>
+                            </div>
+                            <div class="m-b-10">
+                                <a href="#" class="btn btn-primary btn-xs">Extra small button</a>
+                                <a href="#" class="btn btn-primary btn-sm">Small button</a>
+                                <a href="#" class="btn btn-primary">Default button</a>
+                                <a href="#" class="btn btn-primary btn-lg">Large button</a>
+                            </div>
+                        </div>
+
+                        <h3 class="title-hero">Background Colors</h3>
+                        <p class="title-lead">You can use the color helper CSS classes to add different background to the button element.</p>
+                        <div class="doc-table table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Result</th>
+                                        <th>Helper class</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><button class="btn btn-default">Default</button></td>
+                                        <td><code>.btn-default</code></td>
+                                        <td>This is the <strong>default</strong> background color.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><button class="btn btn-primary">Primary</button></td>
+                                        <td><code>.btn-primary</code></td>
+                                        <td>This is the <strong>primary</strong> background color.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><button class="btn btn-success">Success</button></td>
+                                        <td><code>.btn-succes</code></td>
+                                        <td>Used for <strong>success</strong> actions.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><button class="btn btn-danger">Danger</button></td>
+                                        <td><code>.btn-danger</code></td>
+                                        <td>Used for <strong>danger</strong> actions.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><button class="btn btn-warning">Warning</button></td>
+                                        <td><code>.btn-warning</code></td>
+                                        <td>Used for <strong>warning</strong> actions.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><button class="btn btn-info">Info</button></td>
+                                        <td><code>.btn-info</code></td>
+                                        <td>Used for <strong>information</strong> actions.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3 class="title-hero">Rounded buttons</h3>
+                        <p class="title-lead">To change the button elements to rounded you have to add the <code>.btn-rounded</code> CSS helper class.</p>
+                        <div class="doc-example">
+                            <button class="btn btn-rounded btn-default">Default</button>
+                            <button class="btn btn-rounded btn-primary">Primary</button>
+                            <button class="btn btn-rounded btn-success">Success</button>
+                            <button class="btn btn-rounded btn-info">Info</button>
+                            <button class="btn btn-rounded btn-warning">Warning</button>
+                            <button class="btn btn-rounded btn-danger">Danger</button>
+                            <button class="btn btn-rounded btn-dark">Dark</button>
+                            <button class="btn btn-rounded btn-default disabled">Disabled</button>
+                        </div>
+
+                        <h3 class="title-hero">Full Width</h3>
+                        <p class="title-lead">To change the button elements to full width (block level) you have to add the <code>.btn-block</code> CSS helper class.</p>
+                        <div class="doc-example">
+                            <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+                            <button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
+                        </div>
+
+                        <h3 class="title-hero">Button Groups</h3>
+                        <p class="title-lead">To create button groups you need to wrap buttons inside a <code>&lt;div&gt;</code> with <code>.btn-group</code> CSS helper class.</p>
+                        <div class="doc-example">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default">Left</button>
+                                <button type="button" class="btn btn-default">Middle</button>
+                                <button type="button" class="btn btn-default">Right</button>
+                            </div>
+                        </div>
+
+                        <h4 class="title-hero">Sizing</h4>
+                        <p class="title-lead">To change the button groups sizes you need to add one of the following CSS helper classes to the <code>.label-group</code>, <code>.label-group-xs</code>, <code>.label-group-sm</code>, <code>.label-group-lg</code>.</p>
+                        <div class="doc-example">
+                            <div class="btn-toolbar m-b-10">
+                                <div class="btn-group btn-group-lg">
+                                    <button type="button" class="btn btn-default">Left</button>
+                                    <button type="button" class="btn btn-default">Middle</button>
+                                    <button type="button" class="btn btn-default">Right</button>
+                                </div>
+                            </div>
+                            <div class="btn-toolbar m-b-10">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default">Left</button>
+                                    <button type="button" class="btn btn-default">Middle</button>
+                                    <button type="button" class="btn btn-default">Right</button>
+                                </div>
+                            </div>
+                            <div class="btn-toolbar m-b-10">
+                                <div class="btn-group btn-group-sm">
+                                    <button type="button" class="btn btn-default">Left</button>
+                                    <button type="button" class="btn btn-default">Middle</button>
+                                    <button type="button" class="btn btn-default">Right</button>
+                                </div>
+                            </div>
+                            <div class="btn-toolbar m-b-10">
+                                <div class="btn-group btn-group-xs">
+                                    <button type="button" class="btn btn-default">Left</button>
+                                    <button type="button" class="btn btn-default">Middle</button>
+                                    <button type="button" class="btn btn-default">Right</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="title-hero">Toolbars</h4>
+                        <p class="title-lead">Button toolbars consist of multiple <code>.btn-group</code> elements wrapped inside a <code>&lt;div&gt;</code> with <code>.btn-toolbar</code> CSS helper class.</p>
+                        <div class="doc-example">
+                            <div class="btn-toolbar">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default">1</button>
+                                    <button type="button" class="btn btn-default active">2</button>
+                                    <button type="button" class="btn btn-default">3</button>
+                                    <button type="button" class="btn btn-default">4</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default">5</button>
+                                    <button type="button" class="btn btn-default">6</button>
+                                    <button type="button" class="btn btn-default">7</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default">8</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="title-hero">Nesting Horizontal</h4>
+                        <p class="title-lead">By placing a <code>.btn-group</code> within another <code>.btn-group</code> you can create dropdown menus mixed with a series of buttons.</p>
+                        <div class="doc-example">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default">1</button>
+                                <button type="button" class="btn btn-default">2</button>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Dropdown link</a></li>
+                                        <li><a href="#">Dropdown link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="title-hero">Nesting Vertical</h4>
+                        <p class="title-lead">To create vertically nestes button groups you need to wrap the <code>.btn-group</code> elements within a wrapper with <code>.btn-group-vertical</code> CSS helper class.</p>
+                        <div class="doc-example">
+                            <div class="btn-group-vertical">
+                                <button type="button" class="btn btn-default">Button</button> <button type="button" class="btn btn-default">Button</button>
+                                <div class="btn-group">
+                                    <button id="btnGroupVerticalDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Dropdown <span class="caret"></span></button>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop1">
+                                        <li><a href="#">Dropdown link</a></li>
+                                        <li><a href="#">Dropdown link</a></li>
+                                    </ul>
+                                </div>
+                                <button type="button" class="btn btn-default">Button</button> <button type="button" class="btn btn-default">Button</button>
+                                <div class="btn-group">
+                                    <button id="btnGroupVerticalDrop2" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Dropdown <span class="caret"></span></button>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop2">
+                                        <li><a href="#">Dropdown link</a></li>
+                                        <li><a href="#">Dropdown link</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group">
+                                    <button id="btnGroupVerticalDrop3" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></button>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop3">
+                                        <li><a href="#">Dropdown link</a></li>
+                                        <li><a href="#">Dropdown link</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group">
+                                    <button id="btnGroupVerticalDrop4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></button>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop4">
+                                        <li><a href="#">Dropdown link</a></li>
+                                        <li><a href="#">Dropdown link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="title-hero">Justified Groups</h4>
+                        <p class="title-lead">To make a group of buttons stretch at equal sizes to span the entire width of its parent, you need to add <code>.label-group-justified</code> to the <code>.label-group</code> element. Also works with button dropdowns within the button group.</p>
+                        <div class="doc-example">
+                            <div class="m-b-10">
+                                <div class="btn-group btn-group-justified">
+                                    <a class="btn btn-default" role="button">Left</a>
+                                    <a class="btn btn-default" role="button">Middle</a>
+                                    <a class="btn btn-default" role="button">Right</a>
+                                </div>
+                            </div>
+                            <div class="m-b-10">
+                                <div class="btn-group btn-group-justified">
+                                    <a class="btn btn-default" role="button">Left</a>
+                                    <a class="btn btn-default" role="button">Middle</a>
+                                    <div class="btn-group">
+                                        <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Right dropdown <span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="title-hero">Button Dropdowns</h3>
+                        <p class="title-lead">Use any button to trigger a dropdown menu by placing it within a <code>.label-group</code> and providing the proper menu markup.</p>
+                        <div class="doc-example">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Default <span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Primary <span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Success <span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Info <span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Warning <span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Danger <span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h4 class="title-hero">Split Button Dropdowns</h4>
+                        <p class="title-lead">Similarly, create split button dropdowns with the same markup changes, only with a separate button.</p>
+                        <div class="doc-example">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default">Default</button> <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span> <span class="sr-only">Toggle Dropdown</span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary">Primary</button> <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span> <span class="sr-only">Toggle Dropdown</span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success">Success</button> <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span> <span class="sr-only">Toggle Dropdown</span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-info">Info</button> <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span> <span class="sr-only">Toggle Dropdown</span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-warning">Warning</button> <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span> <span class="sr-only">Toggle Dropdown</span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-danger">Danger</button> <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span> <span class="sr-only">Toggle Dropdown</span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h4 class="title-hero">Sizing</h4>
+                        <p class="title-lead">To change the button dropdowns sizes you need to add one of the following CSS helper classes <code>.label-xs</code>, <code>.label-sm</code>, <code>.label-lg</code>.</p>
+                        <div class="doc-example">
+                            <div class="m-b-10">
+                                <div class="btn-toolbar" role="toolbar">
+                                    <div class="btn-group">
+                                        <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Extra small button <span class="caret"></span></button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m-b-10">
+                                <div class="btn-toolbar" role="toolbar">
+                                    <div class="btn-group">
+                                        <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Small button <span class="caret"></span></button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m-b-10">
+                                <div class="btn-toolbar" role="toolbar">
+                                    <div class="btn-group">
+                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Default button <span class="caret"></span></button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m-b-10">
+                                <div class="btn-toolbar" role="toolbar">
+                                    <div class="btn-group">
+                                        <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Large button <span class="caret"></span></button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="title-hero">Button Dropups</h4>
+                        <p class="title-lead">Button dropups are just like regular dropdowns, only they open at the top rather than the bottom. To create a button dropup you need to add the <code>.dropup</code> CSS helper class to the button parent container.</p>
+                        <div class="doc-example">
+                            <div class="btn-toolbar" role="toolbar">
+                                <div class="btn-group dropup">
+                                    <button type="button" class="btn btn-default">Dropup</button> <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span> <span class="sr-only">Toggle Dropdown</span></button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group dropup">
+                                    <button type="button" class="btn btn-primary">Right dropup</button> <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span> <span class="sr-only">Toggle Dropdown</span></button>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- #content -->
+<% include _footer %>

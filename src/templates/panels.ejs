@@ -1,0 +1,105 @@
+<%
+var pageTitle = "Panels";
+var pageID    = "panels";
+%>
+<% include _header %>
+<% include _sidebar %>
+        <div id="content" class="app-content" role="main">
+            <div class="content-header">
+                <h2 class="page-title"><%= pageTitle %></h2>
+                <p>Discover the Panels features below</p>
+            </div>
+            <div class="content-wrapper">
+                <h3 class="title-hero">Basic</h3>
+                <p class="title-lead">By default, all the <code>.panel</code> does is apply some basic border and padding to contain some content.</p>
+                <div class="doc-example">
+                    <div class="panel panel-default">
+                        <div class="panel-body">Basic panel example</div>
+                    </div>
+                </div>
+
+                <h3 class="title-hero">Panel with heading</h3>
+                <p class="title-lead">Easily add a heading container to your panel with <code>.panel-heading</code>. You may also include any <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> with a <code>.panel-title</code> class to add a pre-styled heading. However, the font sizes of <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> are overridden by <code>.panel-heading</code>. For proper link coloring, be sure to place links in headings within <code>.panel-title</code>.</p>
+                <div class="doc-example">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Panel heading without title</div>
+                        <div class="panel-body">Panel content</div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Panel title</h3>
+                        </div>
+                        <div class="panel-body">Panel content</div>
+                    </div>
+                </div>
+
+                <h3 class="title-hero">Panel with footer</h3>
+                <p class="title-lead">Wrap buttons or secondary text in <code>.panel-footer</code>. Note that panel footers <strong>do not</strong> inherit colors and borders when using contextual variations as they are not meant to be in the foreground.</p>
+                <div class="doc-example">
+                    <div class="panel panel-default">
+                        <div class="panel-body">Panel content</div>
+                        <div class="panel-footer">Panel footer</div>
+                    </div>
+                </div>
+
+                <h3 class="title-hero">Contextual alternatives</h3>
+                <p class="title-lead">Like other components, easily make a panel more meaningful to a particular context by adding any of the contextual state classes.</p>
+                <div class="doc-example">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Primary</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <span>This panel has <code>.panel-primary</code> class.</span>
+                                </div>
+                            </div>
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Success</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <span>This panel has <code>.panel-success</code> class.</span>
+                                </div>
+                            </div>
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Info</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <span>This panel has <code>.panel-info</code> class.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-warning">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Warning</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <span>This panel has <code>.panel-warning</code> class.</span>
+                                </div>
+                            </div>
+                            <div class="panel panel-danger">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Danger</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <span>This panel has <code>.panel-danger</code> class.</span>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Basic</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <span>This panel has <code>.panel-default</code> class.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- #content -->
+<% include _footer %>

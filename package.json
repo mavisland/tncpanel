@@ -38,10 +38,14 @@
     "browser-sync": "^2.17.3",
     "gulp": "^3.9.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^2.0.13",
 =======
     "gulp-clean": "^0.3.2",
+=======
+    "gulp-clean": "^0.4.0",
+>>>>>>> f540f582e5703a48ef8fc2f223c68edac57d49e8
     "gulp-clean-css": "^4.3.0",
 >>>>>>> master
     "gulp-concat": "^2.6.0",

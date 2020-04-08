@@ -42,7 +42,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-ejs": "^2.2.1",
     "gulp-header": "^1.8.8",
-    "gulp-less": "^3.1.0",
+    "gulp-less": "^4.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.7"
